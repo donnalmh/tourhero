@@ -1,6 +1,7 @@
 
 <script setup lang="ts">
     import ItineraryDetails from './main/ItineraryDetails.vue'
+    import ItineraryProperties from './aside/ItineraryProperties.vue'
 </script>
 
 <template>
@@ -9,7 +10,9 @@
             <div class="bordered col-span-5">
                 <ItineraryDetails />
             </div>
-            <div class="col-span-2">04</div>
+            <div class="col-span-2">
+                <ItineraryProperties />
+            </div>
         </div>
 
     </div>
