@@ -4,6 +4,7 @@ import CarousellBanner from './components/top/CarousellBanner.vue'
 import ItineraryContent from './components/content/ItineraryContent.vue'
 </script>
 
+
 <template>
     <CarousellBanner />
     <ItineraryContent />

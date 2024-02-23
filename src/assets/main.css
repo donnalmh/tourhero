@@ -1,5 +1,5 @@
 @import './base.css';
-
+@import '/node_modules/primeicons/primeicons.css';
 #app {
   /* max-width: 1280px; */
   margin: 0;
@@ -43,13 +43,20 @@ a,
   font-family: 'Gilroy';
   src: url(./font/gilroy/Gilroy-Medium.ttf);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url(./font/gilroy/Gilroy-Thin.ttf) ;
   font-style: normal;
   font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(./font/gilroy/Ultra-Thin.ttf) ;
+  font-style: normal;
+  font-weight: 100;
 }
 @font-face {
   font-family: 'Gilroy';
