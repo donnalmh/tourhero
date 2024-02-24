@@ -1,29 +1,15 @@
 <script setup lang="ts">
+import { type PropType } from 'vue'
     import FeatureItem from './FeatureItem.vue'
-
-
-    export interface Features {
-        duration: number
-        countries: number
-        activityLevel: string
-        language: string
-        inclusion: {
-            food: boolean
-            hotel: boolean
-            transport: boolean
-            wifi: boolean
-        }
-    }
-
-    const props = defineProps<Features>(withDefaults({
-        duration: 3,
-        countries: 2,
-        
-    }))
+import { inject } from 'vue';
+import type { ItineraryProps } from '../ItineraryContent.vue';
+    const itineraryObject: ItineraryProps | undefined = inject('itineraryObject')
+    console.log("itinerary: ", itineraryObject)
+    
 </script>
 <template>
-    <div class="grid grid-cols-4 gap-4">
-        <FeatureItem />
+    <div v-if="itineraryObject" class="grid grid-cols-3 border border-slate-200">
+            <FeatureItem  v-for="(feature, index) in itineraryObject.features" :key="index" :category="feature.title" :value="feature.value" />
     </div>
 
 </template>
