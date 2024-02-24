@@ -2,6 +2,7 @@
 <script setup lang="ts">
     import ItineraryDetails from './main/ItineraryDetails.vue'
     import ItineraryProperties from './aside/ItineraryProperties.vue'
+    import TheWelcome from '../TheWelcome.vue'
 </script>
 
 <template>
