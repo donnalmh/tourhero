@@ -1,5 +1,5 @@
 <template>
-    <div class="carousell bg-slate-500">
+    <div class="carousell">
 test test
     </div>
 </template>
@@ -9,5 +9,6 @@ test test
     height: 300px;
     width: 100%;
     margin: 0px;
+    background-color: lightgray;
 }
 </style>

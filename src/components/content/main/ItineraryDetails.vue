@@ -23,6 +23,7 @@
 
         padding: 2em;
         font: "Gilroy", sans-serif;
+        background-color: white;
     }
 
     .caption{

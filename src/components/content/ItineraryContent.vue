@@ -6,11 +6,11 @@
 
 <template>
     <div class="content">
-        <div class="grid grid-cols-7 gap-4">
-            <div class="bordered col-span-5">
+        <div class="grid grid-cols-12 gap-4">
+            <div class="bordered col-span-8">
                 <ItineraryDetails />
             </div>
-            <div class="col-span-2">
+            <div class="col-span-4">
                 <ItineraryProperties />
             </div>
         </div>

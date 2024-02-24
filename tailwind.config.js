@@ -2,8 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'flame-orange': '#F7000A'
+      }
+    },
+   
   },
+
   plugins: [],
 }
 
