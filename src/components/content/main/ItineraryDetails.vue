@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ItineraryTimeline from './ItineraryTimeline.vue'
 </script>
 
 <template>
@@ -12,7 +13,7 @@
             that line the impressive 100-metre pool.
         </div>
         <div class="itinerary-title mt-4"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
-
+        <ItineraryTimeline />
     </div>
 </template>
 
