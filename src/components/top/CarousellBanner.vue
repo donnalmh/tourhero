@@ -13,14 +13,13 @@ test test
 }
 </style> -->
 <template>
-    <Carousel>
+    <Carousel :items-to-show="1.5" :wrap-around="true">
       <Slide v-for="slide in 10" :key="slide">
         <div class="carousel__item">{{ slide }}</div>
       </Slide>
   
       <template #addons>
         <Navigation />
-        <Pagination />
       </template>
     </Carousel>
   </template>
@@ -30,22 +29,13 @@ test test
   import 'vue3-carousel/dist/carousel.css'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   
-//   export default {
-//     name: 'App',
-//     components: {
-//       Carousel,
-//       Slide,
-//       Pagination,
-//       Navigation,
-//     },
-//   }
   </script>
 
 <style scoped>
 .carousel__item {
-  min-height: 200px;
+  min-height: 400px;
   width: 100%;
-  background-color: var(--vc-clr-primary);
+  background-color: green;
   color: var(--vc-clr-white);
   font-size: 20px;
   border-radius: 8px;

@@ -1,5 +1,6 @@
 @import './base.css';
 @import '/node_modules/primeicons/primeicons.css';
+@import '/node_modules/vue3-carousel/dist/carousel.css';
 #app {
   /* max-width: 1280px; */
   margin: 0;

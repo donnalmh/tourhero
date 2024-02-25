@@ -60,7 +60,7 @@
             },
             {
                 dayNo: 2,
-                title: 'See the largest indoor waterfall in the world',
+                title: 'Two giant conservatories',
                 description: "Two giant conservatories rise beside Marina bay like futuristic shells, one home to ancient olive trees, the other to a towering , tropical mountain. To the north are Supertrees: futurists.",
                 sourceImg: []
             },

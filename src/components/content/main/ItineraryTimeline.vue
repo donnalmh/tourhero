@@ -1,23 +1,38 @@
 <script setup lang="ts">
+import TimelineItem from './TimelineItem.vue'
+import { inject } from 'vue';
+
+import type { ItineraryProps } from '../ItineraryContent.vue';
+    const itineraryObject: ItineraryProps | undefined = inject('itineraryObject')
+    console.log("itinerary: ", itineraryObject)
+
+    const itineraryDays = itineraryObject?.itineraryDetail;
 </script>
 
 <template>
-    <div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-content">
-            <div class="timeline-pic">2022</div>
-        </div>
+    <div v-if='itineraryDays && itineraryDays.length >0' class="timeline">
+        <!-- <div class="timeline-item">
+            <div class="timeline-content">
+                <div class="timeline-pic">2022</div>
+            </div>
+        </div> -->
+        
+        <TimelineItem v-for="(item, index) in itineraryObject?.itineraryDetail" :key="index" :day-no="item.dayNo" :description="item.description" :title="item.title"  />
+        <!-- <TimelineItem /> -->
+        <!-- <TimelineItem /> -->
+        <!-- <TimelineItem /> -->
+        <!-- <TimelineItem /> -->
+
+        <!-- <div class="timeline-item">
+            <div class="timeline-content">
+                <div class="timeline-pic">2023</div>
+            </div>
         </div>
         <div class="timeline-item">
-        <div class="timeline-content">
-            <div class="timeline-pic">2023</div>
-        </div>
-        </div>
-        <div class="timeline-item">
-        <div class="timeline-content">
-            <div class="timeline-pic">2024</div>
-        </div>
-        </div>
+            <div class="timeline-content">
+                <div class="timeline-pic">2024</div>
+            </div>
+        </div> -->
     </div>
 </template>
 
