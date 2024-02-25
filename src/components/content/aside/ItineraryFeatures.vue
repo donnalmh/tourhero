@@ -8,7 +8,7 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
     
 </script>
 <template>
-    <div v-if="itineraryObject" class="grid grid-cols-3 border border-slate-200">
+    <div v-if="itineraryObject" class="grid grid-cols-3 border border-slate-200 pb-3">
             <FeatureItem  v-for="(feature, index) in itineraryObject.features" :key="index" :category="feature.title" :value="feature.value" />
     </div>
 

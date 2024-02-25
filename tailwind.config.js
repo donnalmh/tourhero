@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'flame-orange': '#F7000A'
+        'flame-orange': '#F7000A',
+        'cerulean-blue': '#007B8A'
       }
     },
    

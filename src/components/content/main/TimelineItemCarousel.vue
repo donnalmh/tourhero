@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { inject } from 'vue';
-import 'vue3-carousel/dist/carousel.css'
 import { ref } from 'vue'
 
 
@@ -54,10 +53,5 @@ import { ref } from 'vue'
     height: 150px;
   }
 
- 
-  .carousel__prev,
-  .carousel__next {
-    box-sizing: content-box;
-    border: 5px solid white;
-  }
+
   </style>

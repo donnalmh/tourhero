@@ -1,6 +1,5 @@
 @import './base.css';
 @import '/node_modules/primeicons/primeicons.css';
-@import '/node_modules/vue3-carousel/dist/carousel.css';
 #app {
   /* max-width: 1280px; */
   margin: 0;
@@ -98,3 +97,9 @@ a,
     padding: 0 2rem;
   }
 } */
+.carousel__next, .carousel__prev {
+  background-color: white;
+  border-radius: 1rem;
+  width: 1.5rem;
+    height: 1.5rem;
+}

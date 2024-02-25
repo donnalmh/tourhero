@@ -10,33 +10,20 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
 </script>
 
 <template>
-    <div v-if='itineraryDays && itineraryDays.length >0' class="timeline">
-        <!-- <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-pic">2022</div>
-            </div>
-        </div> -->
-        
-        <TimelineItem v-for="(item, index) in itineraryObject?.itineraryDetail" :key="index" :day-no="item.dayNo" :description="item.description" :title="item.title"  />
-        <!-- <TimelineItem /> -->
-        <!-- <TimelineItem /> -->
-        <!-- <TimelineItem /> -->
-        <!-- <TimelineItem /> -->
-
-        <!-- <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-pic">2023</div>
-            </div>
+    <div class="overflow">
+        <div v-if='itineraryDays && itineraryDays.length >0' class="timeline">
+            <TimelineItem v-for="(item, index) in itineraryObject?.itineraryDetail" :key="index" :day-no="item.dayNo" :description="item.description" :title="item.title"  />
         </div>
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-pic">2024</div>
-            </div>
-        </div> -->
     </div>
 </template>
 
 <style scoped>
+    .overflow {
+        overflow-y: scroll;
+        height:500px;
+        padding-top:5px;
+
+    }
     .timeline {
         position: relative;
         margin: 0 7px 0;

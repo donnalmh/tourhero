@@ -70,6 +70,12 @@
                 title: "Singapore's 21st-century botanical garden",
                 description: "Singapore's 21st-century botanical garden is a $1 billion, 101-hectare fantasy land of a space-age biodomes, high-tech Supertrees and whimsical scultures.",
                 sourceImg: []
+            },
+            {
+                dayNo: 4,
+                title: "Super Park",
+                description: "Spanning a whopping 101 hectares, Gardens By the Bay is Singapore's hottest horticultural asset. The $1 billion dollar super park is home to 1.5 million plants, not to mention fauna.",
+                sourceImg: []
             }
         ],
         currentPrice: 1300,
@@ -120,7 +126,9 @@
 <style scoped>
     .content {
         height: 100%;
-        margin: -2em 10em 0;
+        margin: -4em 10em 0;
+        position: absolute;
+    z-index: 10;
     }
 
     .bordered {

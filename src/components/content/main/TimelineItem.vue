@@ -18,9 +18,9 @@ const props = defineProps<timelineProps>()
                 </div>
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
-                        <div class="flex justify-between">
+                        <div class="flex flex-row">
                             <div class="day">Day {{ props.dayNo}}</div>
-                            <div class="title">{{  props.title  }}</div>
+                            <div class="title ml-3">{{  props.title  }}</div>
                         </div>
                         <div class='description'>
                             {{ props.description  }}
@@ -47,7 +47,7 @@ const props = defineProps<timelineProps>()
 }
 .description {
     font-size: 0.7rem;
-    color:#9bacbc;
+    color:#798590;
 }
 .title {
     font-size: 0.8rem;
@@ -55,7 +55,7 @@ const props = defineProps<timelineProps>()
 }
 .day{
     color: #123162;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
 }
 .timeline-content {
