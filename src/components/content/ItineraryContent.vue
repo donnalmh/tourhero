@@ -56,13 +56,14 @@
                 dayNo: 1,
                 title: 'See the largest indoor waterfall in the world',
                 description: "Just how much mind-boggling can be packed into a 14-day holiday? Well we'll tell you. Our hot adventure park packs a serious punch on a journey to Singapore and Malaysia.",
-                sourceImg: []
+                sourceImg: ['https://picsum.photos/250/150?q=1','https://picsum.photos/250/150?q=2','https://picsum.photos/250/150?q=3','https://picsum.photos/250/150?q=4']
             },
             {
                 dayNo: 2,
                 title: 'Two giant conservatories',
                 description: "Two giant conservatories rise beside Marina bay like futuristic shells, one home to ancient olive trees, the other to a towering , tropical mountain. To the north are Supertrees: futurists.",
-                sourceImg: []
+                sourceImg: ['https://picsum.photos/250/150?q=5','https://picsum.photos/250/150?q=6','https://picsum.photos/250/150?q=7','https://picsum.photos/250/150?q=8']
+
             },
             {
                 dayNo: 3,

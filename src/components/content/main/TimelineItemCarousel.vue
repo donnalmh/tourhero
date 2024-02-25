@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { inject } from 'vue';
+import 'vue3-carousel/dist/carousel.css'
+import { ref } from 'vue'
+
+
+
+</script>
 <template>
     <Carousel  ref="myCarousel" :itemsToScroll="1">
       <Slide v-for="slide in 10" :key="slide">
@@ -14,15 +23,7 @@
     </Carousel>
   </template>
   
-  <script setup lang="ts">
-  import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
-  import { inject } from 'vue';
-  import 'vue3-carousel/dist/carousel.css'
-  import { ref } from 'vue'
 
-
- 
-  </script>
   
   <style scoped>
 

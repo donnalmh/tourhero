@@ -37,8 +37,8 @@ const props = defineProps<timelineProps>()
 
 <style scoped>
 .carousel {
+    width: 250px;
     height: 150px;
-    width: 250px
 }
 .link {
     text-decoration: underline;
