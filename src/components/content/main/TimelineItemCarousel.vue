@@ -1,7 +1,7 @@
 <template>
     <Carousel  ref="myCarousel" :itemsToScroll="1">
       <Slide v-for="slide in 10" :key="slide">
-        <img src="/jewel.png" />
+        <img src="jewel.png" />
         <!-- <div class="carousel__item">{{  slide }}1</div> -->
       </Slide>
   
