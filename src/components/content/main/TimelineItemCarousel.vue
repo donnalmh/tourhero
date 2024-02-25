@@ -1,7 +1,8 @@
 <template>
     <Carousel  ref="myCarousel" :itemsToScroll="1">
       <Slide v-for="slide in 10" :key="slide">
-        <img src="jewel.png" />
+        <img src="https://picsum.photos/250/150?q=1" />
+        <!-- <img :src="https://picsum.photos/300/200?q=1" /> -->
         <!-- <div class="carousel__item">{{  slide }}1</div> -->
       </Slide>
   
@@ -40,10 +41,19 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .carousel__slide {
+
+  .carousel__viewport {
+    /* width: 250px!important; */
   }
-  
+  ol.carousel__track {
+    /* width: 250px!important; */
+  }
+  .carousel__slide {
+    /* width: 250px!important; */
+    height: 150px;
+  }
+
+ 
   .carousel__prev,
   .carousel__next {
     box-sizing: content-box;

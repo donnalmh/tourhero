@@ -13,7 +13,9 @@ const props = defineProps<timelineProps>()
 <template>
      <div class="timeline-item">
             <div class="timeline-content">
-                <TimelineItemCarousel />
+                <div class="carousel">
+                    <TimelineItemCarousel />
+                </div>
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
                         <div class="flex justify-between">
@@ -34,6 +36,10 @@ const props = defineProps<timelineProps>()
 </template>
 
 <style scoped>
+.carousel {
+    height: 150px;
+    width: 250px
+}
 .link {
     text-decoration: underline;
     color: #478f88;
@@ -55,6 +61,7 @@ const props = defineProps<timelineProps>()
 .timeline-content {
         display: flex;
         flex-direction: row;
+        height: 150px;
     }
 
     .timeline-pic {
