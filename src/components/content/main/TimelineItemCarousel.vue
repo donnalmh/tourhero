@@ -2,22 +2,26 @@
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { inject } from 'vue';
 import { ref } from 'vue'
+import type { SourceImage } from '../ItineraryContent.vue';
 
+export interface linkProps {
+    links: SourceImage[]
+}
 
+const props = defineProps<linkProps>()
 
+console.log("props props: ",props.links)
 </script>
 <template>
-    <Carousel  ref="myCarousel" :itemsToScroll="1">
-      <Slide v-for="slide in 10" :key="slide">
-        <img src="https://picsum.photos/250/150?q=1" />
-        <!-- <img :src="https://picsum.photos/300/200?q=1" /> -->
-        <!-- <div class="carousel__item">{{  slide }}1</div> -->
-      </Slide>
+    <Carousel :itemsToScroll="1">
+      <!-- <Slide v-for="(slide, index) in props.links" :key="index"> -->
+        <Slide v-for="link in props.links" :key="link.id"> 
+        <!-- <img src="https://picsum.photos/200/120?q=1" /> -->
+          <img :src="link.url" /> 
+        </Slide>
   
       <template #addons>
         <Navigation />
-        <!-- <Pagination /> -->
-        <!-- <div></div> -->
       </template>
     </Carousel>
   </template>
@@ -50,7 +54,7 @@ import { ref } from 'vue'
   }
   .carousel__slide {
     /* width: 250px!important; */
-    height: 150px;
+    /* height: 150px; */
   }
 
 

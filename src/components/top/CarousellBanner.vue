@@ -12,10 +12,24 @@ test test
     background-color: lightgray;
 }
 </style> -->
+<script setup lang="ts">
+  // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
+  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import type { SourceImage } from '../content/ItineraryContent.vue';
+  const link = "https://picsum.photos/1600/600?q="
+  const images: SourceImage[] = [
+    { id: 1, url: link + 1 },
+    { id: 2, url: link + 2 },
+    { id: 3, url: link + 3 },
+    { id: 4, url: link + 4 },
+    { id: 5, url: link + 5 }
+  ]
+  
+</script>
 <template>
     <Carousel :items-to-show="1.5" :wrap-around="true">
-      <Slide v-for="slide in 10" :key="slide">
-        <img src="https://picsum.photos/1600/600?q=1" />
+      <Slide v-for="link in images" :key="link.id">
+        <img :src="link.url" />
       </Slide>
   
       <template #addons>
@@ -24,11 +38,7 @@ test test
     </Carousel>
   </template>
   
-  <script setup lang="ts">
-  // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
-  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-  
-  </script>
+
 
 <style scoped>
 .carousel {

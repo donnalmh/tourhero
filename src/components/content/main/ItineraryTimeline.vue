@@ -12,7 +12,7 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
 <template>
     <div class="overflow">
         <div v-if='itineraryDays && itineraryDays.length >0' class="timeline">
-            <TimelineItem v-for="(item, index) in itineraryObject?.itineraryDetail" :key="index" :day-no="item.dayNo" :description="item.description" :title="item.title"  />
+            <TimelineItem v-for="(item, index) in itineraryObject?.itineraryDetail" :key="index" :day-no="item.dayNo" :description="item.description" :title="item.title" :link="item.sourceImg" />
         </div>
     </div>
 </template>

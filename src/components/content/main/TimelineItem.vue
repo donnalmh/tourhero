@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import type { SourceImage } from '../ItineraryContent.vue';
 import TimelineItemCarousel from './TimelineItemCarousel.vue';
 export interface timelineProps {
     dayNo: number
     title: string
     description: string
+    link: SourceImage[]
 }
 
 const props = defineProps<timelineProps>()
@@ -14,7 +16,7 @@ const props = defineProps<timelineProps>()
      <div class="timeline-item">
             <div class="timeline-content">
                 <div class="carousel">
-                    <TimelineItemCarousel />
+                    <TimelineItemCarousel :links="props.link"/>
                 </div>
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
@@ -37,8 +39,8 @@ const props = defineProps<timelineProps>()
 
 <style scoped>
 .carousel {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
 }
 .link {
     text-decoration: underline;
@@ -61,7 +63,7 @@ const props = defineProps<timelineProps>()
 .timeline-content {
         display: flex;
         flex-direction: row;
-        height: 150px;
+        height: 120px;
     }
 
     .timeline-pic {
