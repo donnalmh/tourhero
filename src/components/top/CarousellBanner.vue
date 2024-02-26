@@ -13,7 +13,7 @@ test test
 }
 </style> -->
 <template>
-    <Carousel :items-to-show="1.2" :wrap-around="true">
+    <Carousel :items-to-show="1.5" :wrap-around="true">
       <Slide v-for="slide in 10" :key="slide">
         <img src="https://picsum.photos/1600/600?q=1" />
       </Slide>
