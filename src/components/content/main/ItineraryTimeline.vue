@@ -10,7 +10,7 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
 </script>
 
 <template>
-    <div class="overflow">
+    <div id='detail-overflow' class="overflow">
         <div v-if='itineraryDays && itineraryDays.length >0' class="timeline">
             <TimelineItem v-for="(item, index) in itineraryObject?.itineraryDetail" :key="index" :day-no="item.dayNo" :description="item.description" :title="item.title" :link="item.sourceImg" />
         </div>
@@ -20,8 +20,8 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
 <style scoped>
     .overflow {
         overflow-y: scroll;
-        height:500px;
-        padding-top:5px;
+        /* height:550px;
+        padding-top:5px; */
 
     }
     .timeline {

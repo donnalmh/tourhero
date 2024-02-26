@@ -1,10 +1,10 @@
 <!-- eslint-disable vue/no-export-in-script-setup -->
 
 <script setup lang="ts">
-    import { onMounted, provide } from 'vue'
+    import { provide } from 'vue'
     import ItineraryDetails from './main/ItineraryDetails.vue'
     import ItineraryProperties from './aside/ItineraryProperties.vue'
-    import { reactive, ref } from 'vue';
+    import { reactive } from 'vue';
     // export enum FeatureCategory {
     //     DURATION = 'DURATION',
     //     COUNTRIES = 'COUNTRIES',
@@ -137,10 +137,12 @@
     })
 
     provide('itineraryObject', props);
+
+ 
 </script>
 
 <template>
-    <div class="content">
+    <div id='top-content' class="content">
         <div class="grid grid-cols-12 gap-4">
             <div class="bordered col-span-8">
                 <ItineraryDetails />
@@ -149,7 +151,6 @@
                 <ItineraryProperties />
             </div>
         </div>
-
     </div>
 </template>
 

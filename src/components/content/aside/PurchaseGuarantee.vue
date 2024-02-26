@@ -1,5 +1,5 @@
 <template>
-<div class="border border-slate-200 p-4 mt-2 text-cerulean-blue rounded">
+<div class="border border-slate-200 p-4 text-cerulean-blue rounded">
     <div><i class="pi pi-list mr-3"></i><span class='navy confidence'>Buy With Confidence</span></div>
 
     <div class="points mt-3">
