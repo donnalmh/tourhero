@@ -15,32 +15,84 @@ const props = defineProps<timelineProps>()
 <template>
      <div class="timeline-item">
             <div class="timeline-content">
-                <div class="carousel">
+                <div class="carousel-lg">
                     <TimelineItemCarousel :links="props.link"/>
                 </div>
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
-                        <div class="flex flex-row">
+                        <div class="larger-device:flex larger-device:flex-row ">
                             <div class="day">Day {{ props.dayNo}}</div>
-                            <div class="title ml-3">{{  props.title  }}</div>
+                            <div class="title larger-device:ml-3">{{  props.title  }}</div>
+                        </div>
+                        <div class="carousel-sm">
+                            <TimelineItemCarousel :links="props.link"/>
                         </div>
                         <div class='description'>
                             {{ props.description  }}
                         </div>
                     </div>
-
                     <div class="link">
-                            Show more
-                        </div>
+                        Show more
+                    </div>
                 </div>
             </div>
     </div>
+    <!-- <div class="timeline-content">
+        <div class="carousel-lg">
+            <TimelineItemCarousel :links="props.link"/>
+        </div>
+            <div class="larger-device:flex larger-device:flex-row ">
+                <div class="day">Day {{ props.dayNo}}</div>
+                <div class="title larger-device:ml-3">{{  props.title  }}</div>
+            </div>
+            <div class="carousel-sm">
+                <TimelineItemCarousel :links="props.link"/>
+            </div>
+            <div class='description'>
+                {{ props.description  }}
+            </div>
+        </div>
+        <div class="link">
+            Show more
+        </div> -->
 </template>
 
 <style scoped>
-.carousel {
+.carousel-lg {
     width: 200px;
     height: 120px;
+}
+
+.carousel-sm {
+    display: none;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-content {
+        display: flex;
+        flex-direction: row;
+        height: 120px;
+    }
+
+@media screen and (max-width: 639px) {
+    .carousel-lg {
+        display: none;
+    }
+
+    .carousel-sm {
+       
+        display: block;
+    }
+
+    .timeline-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 .link {
     text-decoration: underline;
@@ -60,11 +112,7 @@ const props = defineProps<timelineProps>()
         font-size: 0.8rem;
         font-weight: 600;
 }
-.timeline-content {
-        display: flex;
-        flex-direction: row;
-        height: 120px;
-    }
+
 
     .timeline-pic {
         height: 150px;
@@ -85,10 +133,6 @@ const props = defineProps<timelineProps>()
 
     
 
-    .timeline-item {
-        position: relative;
-        margin-bottom: 50px;
-        }
 
 
     .timeline-item::after {

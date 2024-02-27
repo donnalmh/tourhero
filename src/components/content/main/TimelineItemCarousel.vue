@@ -32,7 +32,7 @@ console.log("props props: ",props.links)
 
   .carousel {
     /* width: 250px; */
-
+    width: 200px;
   }
   .carousel__item {
     min-height: 150px;
@@ -44,6 +44,13 @@ console.log("props props: ",props.links)
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media screen and (max-width: 639px) {
+    .carousel {
+    /* width: 250px; */
+      width: 100%;
+    }
   }
 
   .carousel__viewport {
