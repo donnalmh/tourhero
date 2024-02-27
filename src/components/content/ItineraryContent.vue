@@ -178,4 +178,12 @@
         border-radius: 0.2em; 
         border: '1px solid gray'
     }
+
+
+    @media screen and (max-width: 639px) {
+        .bordered {
+            border: none
+    }
+    /* Additional styles for smaller screens go here */
+    }
 </style>

@@ -7,14 +7,16 @@ import PurchaseGuarantee from '../aside/PurchaseGuarantee.vue';
 
 onMounted(() => {
       // Access the event object during post-mount changes
-    const propertiesHeight = document.getElementById('properties')
-    const topComponentHeight = document.getElementById('top-component-details')
-    var overflow = document.getElementById('detail-overflow'); 
-    if(propertiesHeight && topComponentHeight && overflow ){
-        const padding = 32
-        const diff = propertiesHeight.offsetHeight - topComponentHeight.offsetHeight - (2*padding)
-        overflow.style.height = diff +'px';
-    }
+      if(window.innerWidth >639) {
+            const propertiesHeight = document.getElementById('properties')
+            const topComponentHeight = document.getElementById('top-component-details')
+            var overflow = document.getElementById('detail-overflow'); 
+            if(propertiesHeight && topComponentHeight && overflow ){
+                const padding = 32
+                const diff = propertiesHeight.offsetHeight - topComponentHeight.offsetHeight - (2*padding)
+                overflow.style.height = diff +'px';
+            }
+        }
     // Set the height of the div (replace 300px with your desired height)
     });
 </script>
@@ -37,7 +39,6 @@ onMounted(() => {
             </div>
             <div class="itinerary-title mt-4 xsm:text-center sm:text-center xsm:text-lg"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
         </div>
-        
         <ItineraryTimeline />
     </div>
 </template>
@@ -65,6 +66,9 @@ onMounted(() => {
         display: none;
     }
     @media screen and (max-width: 639px) {
+        .details {
+            border: none;
+        }
         .caption{
             color: #A19A9A;
             font-size: 0.6rem;
