@@ -1,20 +1,19 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import ItineraryTimeline from './ItineraryTimeline.vue'
+import ItineraryFeatures from '../aside/ItineraryFeatures.vue'
+import GoogleMap from '../aside/GoogleMap.vue';
+import PurchaseGuarantee from '../aside/PurchaseGuarantee.vue';
 
 onMounted(() => {
       // Access the event object during post-mount changes
-      const propertiesHeight = document.getElementById('properties')
-    console.log("height properties: ", propertiesHeight?.offsetHeight)
+    const propertiesHeight = document.getElementById('properties')
     const topComponentHeight = document.getElementById('top-component-details')
-    console.log("main top marina properties: ", topComponentHeight?.offsetHeight)
     var overflow = document.getElementById('detail-overflow'); 
     if(propertiesHeight && topComponentHeight && overflow ){
         const padding = 32
         const diff = propertiesHeight.offsetHeight - topComponentHeight.offsetHeight - (2*padding)
         overflow.style.height = diff +'px';
-        console.log("overlow properties: " + overflow.offsetHeight)
-
     }
     // Set the height of the div (replace 300px with your desired height)
     });
@@ -31,8 +30,14 @@ onMounted(() => {
             <div class="description">A great spot for R&R: order yourself a drink from the bar and get comfortable on one of the day beds
                 that line the impressive 100-metre pool.
             </div>
-            <div class="itinerary-title mt-4"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
+            <div class="mobile">
+                <ItineraryFeatures />
+                <GoogleMap />
+                <PurchaseGuarantee class="mt-4" />
+            </div>
+            <div class="itinerary-title mt-4 xsm:text-center sm:text-center xsm:text-lg"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
         </div>
+        
         <ItineraryTimeline />
     </div>
 </template>
@@ -53,7 +58,27 @@ onMounted(() => {
     .caption{
         color: #A19A9A;
         font-size: 0.6rem;
+        display: flex;
     }
+
+    .mobile {
+        display: none;
+    }
+    @media screen and (max-width: 639px) {
+        .caption{
+            color: #A19A9A;
+            font-size: 0.6rem;
+            display: none;
+        }
+
+        .mobile {
+            display: block;
+        }
+    /* Additional styles for smaller screens go here */
+    }
+
+   
+
     
     .title {
         font-weight: 900;
@@ -66,7 +91,7 @@ onMounted(() => {
 
     .itinerary-title {
         color: #123162;
-        font-size: 1rem;
+        /* font-size: 1rem; */
         font-weight: 800;
     }
 </style>

@@ -143,11 +143,11 @@
 
 <template>
     <div id='top-content' class="content">
-        <div class="grid grid-cols-12 gap-4">
-            <div class="bordered col-span-8">
+        <div class="grid  sm:grid-cols-1 sm:gap-4  grid-cols-12 gap-4">
+            <div class="bordered xsm:col-span-1 sm:col-span-1 col-span-8 ">
                 <ItineraryDetails />
             </div>
-            <div class="col-span-4">
+            <div class="sm:col-span-1 col-span-4  ">
                 <ItineraryProperties />
             </div>
         </div>
@@ -159,7 +159,19 @@
         height: 100%;
         margin: -4em 10em 0;
         position: absolute;
-    z-index: 10;
+        z-index: 10;
+    }
+
+    @media screen and (max-width: 639px)
+     {
+        .content {
+            height: 100%;
+            margin: 0; 
+            /* position: absolute; */
+            /* z-index: 10; */
+        }
+        
+        /* Additional styles for smaller screens go here */
     }
 
     .bordered {
