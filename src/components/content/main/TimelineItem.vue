@@ -21,40 +21,22 @@ const props = defineProps<timelineProps>()
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
                         <div class="larger-device:flex larger-device:flex-row ">
-                            <div class="day">Day {{ props.dayNo}}</div>
-                            <div class="title larger-device:ml-3">{{  props.title  }}</div>
+                            <div class="day larger-device:text-xs sm:text-base">Day {{ props.dayNo}}</div>
+                            <div class="title  larger-device:text-xs sm:text-base larger-device:ml-3">{{  props.title  }}</div>
                         </div>
-                        <div class="carousel-sm">
+                        <div class="carousel-sm  sm:mt-4">
                             <TimelineItemCarousel :links="props.link"/>
                         </div>
-                        <div class='description'>
+                        <div class='description sm:mt-4'>
                             {{ props.description  }}
                         </div>
                     </div>
-                    <div class="link">
+                    <div class="link  sm:mt-4">
                         Show more
                     </div>
                 </div>
             </div>
     </div>
-    <!-- <div class="timeline-content">
-        <div class="carousel-lg">
-            <TimelineItemCarousel :links="props.link"/>
-        </div>
-            <div class="larger-device:flex larger-device:flex-row ">
-                <div class="day">Day {{ props.dayNo}}</div>
-                <div class="title larger-device:ml-3">{{  props.title  }}</div>
-            </div>
-            <div class="carousel-sm">
-                <TimelineItemCarousel :links="props.link"/>
-            </div>
-            <div class='description'>
-                {{ props.description  }}
-            </div>
-        </div>
-        <div class="link">
-            Show more
-        </div> -->
 </template>
 
 <style scoped>
@@ -67,17 +49,17 @@ const props = defineProps<timelineProps>()
     display: none;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 50px;
-}
+
 
 .timeline-content {
         display: flex;
         flex-direction: row;
         height: 120px;
     }
-
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
 @media screen and (max-width: 639px) {
     .carousel-lg {
         display: none;
@@ -93,7 +75,31 @@ const props = defineProps<timelineProps>()
         flex-direction: column;
         height: 100%;
     }
+
+    .description {
+        font-size: 0.8rem;
+        color:#798590;
+    }
+
+    .timeline-item {
+        position: relative; 
+        margin-bottom: 20px;
+    }
+
+    .timeline {
+            position: relative;
+            margin: 0 7px 0;
+            padding: 1rem 20px;
+        }
+        .timeline::after {
+            top: 50px;
+        }
+
+        .timeline-item::after {
+            top: 2%
+         }
 }
+
 .link {
     text-decoration: underline;
     color: #478f88;
@@ -104,12 +110,10 @@ const props = defineProps<timelineProps>()
     color:#798590;
 }
 .title {
-    font-size: 0.8rem;
-        font-weight: 600;
+    font-weight: 600;
 }
 .day{
     color: #123162;
-        font-size: 0.8rem;
         font-weight: 600;
 }
 

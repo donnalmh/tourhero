@@ -53,12 +53,14 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
         margin-left: -1px;
     }
 
+
+
     
 
-    .timeline-item {
+    /* .timeline-item {
         position: relative;
         margin-bottom: 50px;
-        }
+    } */
 
 
     .timeline-item::after {
@@ -73,5 +75,20 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
         left: 0;
         margin-left: -24px;
         z-index: 3;
+    }
+
+    @media screen and (max-width: 639px) {
+        .timeline {
+            position: relative;
+            margin: 0 7px 0;
+            padding: 1rem 20px;
+        }
+        .timeline::after {
+            top: 50px;
+        }
+
+        .timeline-item::after {
+            top: 2%
+         }
     }
 </style>

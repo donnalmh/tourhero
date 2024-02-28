@@ -37,7 +37,7 @@ onMounted(() => {
                 <GoogleMap />
                 <PurchaseGuarantee class="mt-4" />
             </div>
-            <div class="itinerary-title mt-4 xsm:text-center sm:text-center xsm:text-lg"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
+            <div class="itinerary-title mt-4 sm:text-center sm:text-center sm:text-xl sm:mt-4 sm:pt-4"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
         </div>
         <ItineraryTimeline />
     </div>
