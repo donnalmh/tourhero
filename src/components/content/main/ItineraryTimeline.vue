@@ -72,7 +72,7 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
             padding: 1rem 20px;
         }
         .timeline::after {
-            top: 50px;
+            /* top: 50px;B */
         }
 
         .timeline-item::after {

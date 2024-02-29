@@ -65,6 +65,24 @@ onMounted(() => {
     .mobile {
         display: none;
     }
+
+    .title {
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
+
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .itinerary-title {
+        color: #123162;
+        /* font-size: 1rem; */
+        font-weight: 800;
+    }
+
     @media screen and (max-width: 639px) {
         .details {
             border: none;
@@ -79,24 +97,23 @@ onMounted(() => {
         .mobile {
             display: block;
         }
+
+        .title {
+            line-height:1.3;
+            font-size:2rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        font-weight: 500;
+        }
+
+
     /* Additional styles for smaller screens go here */
     }
 
    
 
     
-    .title {
-        font-weight: 900;
-        font-size: 1.5rem;
-    }
 
-    .description {
-        font-size: 0.8rem;
-    }
-
-    .itinerary-title {
-        color: #123162;
-        /* font-size: 1rem; */
-        font-weight: 800;
-    }
 </style>

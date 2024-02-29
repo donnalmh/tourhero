@@ -13,7 +13,7 @@ const props = defineProps<linkProps>()
     <Carousel :itemsToScroll="1">
         <Slide v-for="link in props.links" :key="link.id"> 
         <!-- <img src="https://picsum.photos/200/120?q=1" /> -->
-          <img :src="link.url" /> 
+          <img class="rounded" :src="link.url" /> 
         </Slide>
   
       <template #addons>
@@ -43,6 +43,10 @@ const props = defineProps<linkProps>()
     .carousel {
     /* width: 250px; */
       width: 100%;
+    }
+
+    img,video {
+      width:100%
     }
   }
 
