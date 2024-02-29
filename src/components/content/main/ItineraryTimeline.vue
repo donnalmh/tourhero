@@ -4,8 +4,6 @@ import { inject } from 'vue';
 
 import type { ItineraryProps } from '../ItineraryContent.vue';
     const itineraryObject: ItineraryProps | undefined = inject('itineraryObject')
-    console.log("itinerary: ", itineraryObject)
-
     const itineraryDays = itineraryObject?.itineraryDetail;
 </script>
 
@@ -52,16 +50,6 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
         left: 0;
         margin-left: -1px;
     }
-
-
-
-    
-
-    /* .timeline-item {
-        position: relative;
-        margin-bottom: 50px;
-    } */
-
 
     .timeline-item::after {
         content: '';

@@ -5,14 +5,6 @@
     import ItineraryDetails from './main/ItineraryDetails.vue'
     import ItineraryProperties from './aside/ItineraryProperties.vue'
     import { reactive } from 'vue';
-    // export enum FeatureCategory {
-    //     DURATION = 'DURATION',
-    //     COUNTRIES = 'COUNTRIES',
-    //     ACTIVITYLEVEL = 'ACTIVITY LEVEL',
-    //     LANGUAGE = 'LANGUAGE',
-    //     INCLUDES = 'INCLUDES'
-    // }
-    
     export interface ItineraryProps {
         itineraryId: string
         title: string
@@ -24,7 +16,6 @@
         numReviews: number
         features: Feature[]
         teststring: string[]
-
     }
 
     export interface Feature {
@@ -55,8 +46,6 @@
     const carouselWidth = 200;
     const carouselHeight = 120;
     const link  = "https://picsum.photos/"  + carouselWidth + "/"+ carouselHeight + "?q="
-
-
     const props = reactive({
         itineraryId: '09781021',
         title: 'Marina Bay Sands Observation',
@@ -135,10 +124,7 @@
             }
         ]
     })
-
     provide('itineraryObject', props);
-
- 
 </script>
 
 <template>
@@ -162,28 +148,21 @@
         z-index: 10;
     }
 
-    @media screen and (max-width: 639px)
-     {
-        .content {
-            height: 100%;
-            margin: 0; 
-            /* position: absolute; */
-            /* z-index: 10; */
-        }
-        
-        /* Additional styles for smaller screens go here */
-    }
-
     .bordered {
         border-radius: 0.2em; 
         border: '1px solid gray'
     }
 
-
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 639px)
+     {
+        .content {
+            height: 100%;
+            margin: 0; 
+        }
+        
         .bordered {
             border: none
+        }
     }
-    /* Additional styles for smaller screens go here */
-    }
+
 </style>

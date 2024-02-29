@@ -16,7 +16,7 @@ import CustomerRatings from './CustomerRatings.vue'
         <div class="flex justify-center mt-2"><CustomerRatings /></div>
         <div class="all-buttons flex justify-center grid grid-cols-12 gap-1 mt-5">
             <div class="col-span-7">
-                <button class="book-trip bg-flame-orange hover:bg-red-700 text-white  font-bold py-2 px-4 rounded w-full border border-flame-orange">
+                <button class="book-trip bg-flame-orange  hover:bg-red-700 text-white  font-bold py-2 px-4 rounded w-full border border-flame-orange">
                     <div class="flex flex-col justify-center">
                          Book Trip
                     </div>
@@ -52,6 +52,7 @@ import CustomerRatings from './CustomerRatings.vue'
     }
     .book-trip {
         color: white;
+        font-weight:800;
 
     }
     .pricing-component {

@@ -49,8 +49,6 @@ const props = defineProps<timelineProps>()
     display: none;
 }
 
-
-
 .timeline-content {
         display: flex;
         flex-direction: row;
@@ -121,39 +119,33 @@ const props = defineProps<timelineProps>()
         font-weight: 600;
 }
 
+.timeline-pic {
+    height: 150px;
+    width: 250px;
+    background-color:red;
+}
 
-    .timeline-pic {
-        height: 150px;
-        width: 250px;
-        background-color:red;
-    }
-
-    .timeline::after {
-        content: '';
-        position: absolute;
-        width: 2px;
-        background-color: #C9EAED;
-        top: 25px;
-        bottom: 0;
-        left: 0;
-        margin-left: -1px;
-    }
-
-    
-
-
-
-    .timeline-item::after {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border: 1px solid #87a3a5;
-        background-color: white;
-        border-radius: 50%;
-        top: 50%;
-        left: 0;
-        margin-left: -24px;
-        z-index: 3;
-    }
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #C9EAED;
+    top: 25px;
+    bottom: 0;
+    left: 0;
+    margin-left: -1px;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #87a3a5;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-left: -24px;
+    z-index: 3;
+}
 </style>

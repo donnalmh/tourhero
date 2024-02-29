@@ -11,7 +11,6 @@
     }) 
 </script>
 
-
 <template>
     <div class="flex flex-row rating">
         <div v-for="n in 5" :key="n" class="mr-2">
@@ -19,7 +18,9 @@
                 <i class="pi pi-star-fill"></i>
             </div>
         </div>
-        <div class="num-review"> <span class="text-white">{{props.rating}}</span>&nbsp;({{props.numReviews}})</div>
+        <div class="num-review"> 
+            <span class="text-white">{{props.rating}}</span>&nbsp;({{props.numReviews}})
+        </div>
     </div>
 </template>
 

@@ -38,7 +38,6 @@
 .confidence {
     font-weight:900;
 }
-
 .navy {
     color: #132c63
 }

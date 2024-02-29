@@ -7,14 +7,10 @@ import type { SourceImage } from '../ItineraryContent.vue';
 export interface linkProps {
     links: SourceImage[]
 }
-
 const props = defineProps<linkProps>()
-
-console.log("props props: ",props.links)
 </script>
 <template>
     <Carousel :itemsToScroll="1">
-      <!-- <Slide v-for="(slide, index) in props.links" :key="index"> -->
         <Slide v-for="link in props.links" :key="link.id"> 
         <!-- <img src="https://picsum.photos/200/120?q=1" /> -->
           <img :src="link.url" /> 
@@ -26,12 +22,9 @@ console.log("props props: ",props.links)
     </Carousel>
   </template>
   
-
-  
   <style scoped>
 
   .carousel {
-    /* width: 250px; */
     width: 200px;
   }
   .carousel__item {
