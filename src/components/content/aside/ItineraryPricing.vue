@@ -17,17 +17,24 @@ import CustomerRatings from './CustomerRatings.vue'
         <div class="all-buttons flex justify-center grid grid-cols-12 gap-1 mt-5">
             <div class="col-span-7">
                 <button class="book-trip bg-flame-orange hover:bg-red-700 text-white  font-bold py-2 px-4 rounded w-full border border-flame-orange">
-                    Book Trip
+                    <div class="flex flex-col justify-center">
+                         Book Trip
+                    </div>
                 </button>
             </div>
             <div class="col-span-2">
                 <button class="bg-transparent hover:bg-slate-500 hover:text-white text-slate-500  font-bold py-2 px-4 border border-slate-500 rounded w-full">
-                    <i class="pi pi-heart-fill"></i>
+                    <i class="pi pi-heart-fill icon-heart"></i>
+                    
+                    <!-- <div class="flex flex-col justify-center">
+                    </div> -->
                 </button>
             </div>
             <div class="col-span-3">
                 <button class="bg-transparent hover:bg-slate-500 hover:text-white text-slate-500 font-bold py-2 px-4 border border-slate-500 rounded w-full">
-                    Share
+                    <div class="flex flex-col justify-center">
+                        Share
+                    </div>
                 </button>
             </div>
         </div>
@@ -36,6 +43,10 @@ import CustomerRatings from './CustomerRatings.vue'
 
 
 <style scoped>
+    /* .icon-heart {
+        position:relative;
+        top: 3px;
+    } */
     .all-buttons {
         font-size: 0.7rem;
     }
