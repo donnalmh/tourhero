@@ -45,8 +45,8 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
         position: absolute;
         width: 2px;
         background-color: #C9EAED;
-        top: 25px;
-        bottom: 0;
+        top: 100px;
+        bottom: 0px;
         left: 0;
         margin-left: -1px;
     }
@@ -72,11 +72,14 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
             padding: 1rem 20px;
         }
         .timeline::after {
-            /* top: 50px;B */
+            top: 25px;
+            bottom: 0px;
         }
 
         .timeline-item::after {
             top: 2%
          }
+
+       
     }
 </style>

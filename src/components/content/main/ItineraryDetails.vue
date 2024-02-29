@@ -7,7 +7,7 @@ import PurchaseGuarantee from '../aside/PurchaseGuarantee.vue';
 
 onMounted(() => {
       // Access the event object during post-mount changes
-      if(window.innerWidth >639) {
+      if(window.innerWidth > 639) {
             const propertiesHeight = document.getElementById('properties')
             const topComponentHeight = document.getElementById('top-component-details')
             var overflow = document.getElementById('detail-overflow'); 

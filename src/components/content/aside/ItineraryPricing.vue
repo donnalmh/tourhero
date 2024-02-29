@@ -17,7 +17,7 @@ import CustomerRatings from './CustomerRatings.vue'
         <div class="all-buttons flex justify-center grid grid-cols-12 gap-1 mt-5">
             <div class="col-span-7">
                 <button class="book-trip bg-flame-orange  hover:bg-red-700 text-white  font-bold py-2 px-4 rounded w-full border border-flame-orange">
-                    <div class="flex flex-col justify-center">
+                    <div class="flex flex-col justify-center font-extrabold">
                          Book Trip
                     </div>
                 </button>
@@ -32,7 +32,7 @@ import CustomerRatings from './CustomerRatings.vue'
             </div>
             <div class="col-span-3">
                 <button class="bg-transparent hover:bg-slate-500 hover:text-white text-slate-500 font-bold py-2 px-4 border border-slate-500 rounded w-full">
-                    <div class="flex flex-col justify-center">
+                    <div class="flex flex-col justify-center font-extrabold">
                         Share
                     </div>
                 </button>
