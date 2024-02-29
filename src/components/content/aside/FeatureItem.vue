@@ -20,8 +20,8 @@ import { computed, defineProps } from 'vue';
 </script>
 
 <template>
-    <div class="px-4 pt-4">
-        <div class="icon"><i :class="iconString"></i></div>
+    <div class="px-4 sm:px-0 pt-4">
+        <div class="icon sm:text-lg"><i :class="iconString"></i></div>
         <div class="feature text-slate-400">{{category}}</div>
         <div class="value text-black">{{value }} <span v-if="category=='DURATION'">days</span></div>
     </div>
@@ -41,5 +41,18 @@ import { computed, defineProps } from 'vue';
     .value {
         font-size: 0.8rem;
         font-weight:800;
+    }
+
+    @media screen and (max-width: 639px) {
+        .feature {
+            font-size: 0.8rem;
+            font-weight:600;
+        }
+
+        .value {
+            font-size: 1rem;
+            font-weight:500;
+        }
+    /* Additional styles for smaller screens go here */
     }
 </style>

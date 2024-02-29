@@ -22,7 +22,7 @@ const props = defineProps<timelineProps>()
                     <div>
                         <div class="flex flex-row sm:flex-col ">
                             <div class="day text-sm sm:text-base">Day {{ props.dayNo}}</div>
-                            <div class="title ml-3 text-sm sm:text-base sm:ml-0">{{  props.title  }}</div>
+                            <div class="title ml-3 text-sm sm:text-base sm:ml-0  sm:mt-4">{{  props.title  }}</div>
                         </div>
                         <div class="carousel-sm  sm:mt-4">
                             <TimelineItemCarousel :links="props.link"/>
