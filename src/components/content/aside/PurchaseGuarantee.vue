@@ -24,7 +24,7 @@
 @media screen and (max-width: 639px) {
     .detail {
         color: black;
-        font-weight: 400;
+        font-weight: 500;
         font-size:0.8rem;
     }
 /* Additional styles for smaller screens go here */

@@ -68,6 +68,7 @@ onMounted(() => {
     @media screen and (max-width: 639px) {
         .details {
             border: none;
+            padding: 0.5em;
         }
         .caption{
             color: #A19A9A;

@@ -20,9 +20,9 @@ const props = defineProps<timelineProps>()
                 </div>
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
-                        <div class="larger-device:flex larger-device:flex-row ">
-                            <div class="day larger-device:text-xs sm:text-base">Day {{ props.dayNo}}</div>
-                            <div class="title  larger-device:text-xs sm:text-base larger-device:ml-3">{{  props.title  }}</div>
+                        <div class="flex flex-row sm:flex-col ">
+                            <div class="day text-sm sm:text-base">Day {{ props.dayNo}}</div>
+                            <div class="title ml-3 text-sm sm:text-base sm:ml-0">{{  props.title  }}</div>
                         </div>
                         <div class="carousel-sm  sm:mt-4">
                             <TimelineItemCarousel :links="props.link"/>
@@ -60,6 +60,12 @@ const props = defineProps<timelineProps>()
     position: relative;
     margin-bottom: 50px;
 }
+
+.description {
+    font-size: 0.7rem;
+    color:#798590;
+    font-weight:500;
+}
 @media screen and (max-width: 639px) {
     .carousel-lg {
         display: none;
@@ -79,6 +85,7 @@ const props = defineProps<timelineProps>()
     .description {
         font-size: 0.8rem;
         color:#798590;
+        font-weight:500;
     }
 
     .timeline-item {
@@ -105,10 +112,7 @@ const props = defineProps<timelineProps>()
     color: #478f88;
     font-size:0.7rem;   
 }
-.description {
-    font-size: 0.7rem;
-    color:#798590;
-}
+
 .title {
     font-weight: 600;
 }
