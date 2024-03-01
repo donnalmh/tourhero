@@ -111,6 +111,7 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
       }
 
       .carousel__slide img{
+        width: 639px;
         aspect-ratio: 1/1;
       }
 
