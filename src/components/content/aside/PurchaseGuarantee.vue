@@ -8,8 +8,8 @@
         ]
 </script>
 <template>
-<div class="large-device:border large-device:border-slate-200 large-device:p-4 text-cerulean-blue rounded sm:mt-4 sm:pt-4">
-    <div class=" sm:text-center sm:text-2xl sm:mt-2"><i class="pi pi-wallet mr-3"></i><span class='navy confidence'>Buy With Confidence</span></div>
+<div class="large-device:border large-device:border-slate-200 large-device:p-4 rounded sm:mt-4 sm:pt-4">
+    <div class="text-cerulean-blue  sm:text-center sm:text-2xl sm:mt-2"><i class=" pi pi-wallet mr-3"></i><span class='navy confidence'>Buy With Confidence</span></div>
     <div class="points mt-3">
     <div v-for="(point, index) in guaranteePoints" :key="index">
         <div class="sm:text-lg"><i class="pi pi-check-circle mr-3"></i><span class='detail'>{{ point }}</span></div>

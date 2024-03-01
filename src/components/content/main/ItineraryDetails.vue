@@ -25,7 +25,21 @@ addEventListener("resize", (event) => { console.log("event:", event)
 
 onMounted(() => {
       // Access the event object during post-mount changes
-
+      if(window.innerWidth > 992) {
+            const propertiesHeight = document.getElementById('properties')
+            const topComponentHeight = document.getElementById('top-component-details')
+            var overflow1 = document.getElementById('detail-overflow'); 
+            if(propertiesHeight && topComponentHeight && overflow1 ){
+                const padding = 32
+                const diff = propertiesHeight.offsetHeight - topComponentHeight.offsetHeight - (2*padding)
+                overflow1.style.height = diff +'px';
+            }
+        } else {
+            var overflow2= document.getElementById('detail-overflow'); 
+            if(overflow2 ){
+                overflow2.style.height = '100%'
+            }
+        }
     // Set the height of the div (replace 300px with your desired height)
     });
 </script>
@@ -46,16 +60,13 @@ onMounted(() => {
                 <GoogleMap />
                 <PurchaseGuarantee class="mt-4" />
             </div>
-            <div class="itinerary-title mt-4 text-lg sm:text-center sm:text-2xl sm:mt-4 sm:pt-4"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
+            <div class="mt-4 text-lg text-cerulean-blue sm:text-center sm:text-2xl sm:mt-4 sm:pt-4"><i class="i-icon pi pi-sitemap pr-1"></i><span class='itinerary-title '>Itinerary</span></div>
         </div>
         <ItineraryTimeline />
     </div>
 </template>
 
 <style scoped>
-    .i-icon {
-        color: #5EB3BA;
-    }
     .details {
         border-radius: 0.2em; 
         border: 1px solid #e8e8e8;
