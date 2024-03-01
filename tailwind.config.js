@@ -16,13 +16,13 @@ export default {
       // 'md': {'max': '767px'},
       // => @media (max-width: 767px) { ... }
       'large-device': {
-        'min': '640px',
+        'min': '992px',
         'max': '2400px'
       },
       
 
-      'sm': {'max': '639px'},
-      // => @media (max-width: 639px) { ... }
+      'sm': {'max': '991px'},
+      // => @media (max-width: 991px) { ... }
 
       // 'xsm': {'max': '399px'},
       // => @media (max-width: 399px) { ... }

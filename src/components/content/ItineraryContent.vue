@@ -153,7 +153,7 @@
         border: '1px solid gray'
     }
 
-    @media screen and (max-width: 639px)
+    @media screen and (max-width: 991px)
      {
         .content {
             height: 100%;

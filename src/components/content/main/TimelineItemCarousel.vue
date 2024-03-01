@@ -39,7 +39,7 @@ const props = defineProps<linkProps>()
     align-items: center;
   }
 
-  @media screen and (max-width: 639px) {
+  @media screen and (max-width: 991px) {
     .carousel {
     /* width: 250px; */
       width: 100%;

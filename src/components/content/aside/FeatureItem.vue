@@ -43,7 +43,7 @@ import { computed, defineProps } from 'vue';
         font-weight:800;
     }
 
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 991px) {
         .feature {
             font-size: 0.8rem;
             font-weight:600;

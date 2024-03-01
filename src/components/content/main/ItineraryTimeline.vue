@@ -65,7 +65,7 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
         z-index: 3;
     }
 
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 991px) {
         .timeline {
             position: relative;
             margin: 0 7px 0;
@@ -79,6 +79,13 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
         .timeline-item::after {
             top: 2%
          }
+
+        .overflow {
+            overflow-y: unset;
+            /* height:550px;
+            padding-top:5px; */
+
+        }
 
        
     }

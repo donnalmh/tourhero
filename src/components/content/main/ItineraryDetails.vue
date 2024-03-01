@@ -5,18 +5,27 @@ import ItineraryFeatures from '../aside/ItineraryFeatures.vue'
 import GoogleMap from '../aside/GoogleMap.vue';
 import PurchaseGuarantee from '../aside/PurchaseGuarantee.vue';
 
-onMounted(() => {
-      // Access the event object during post-mount changes
-      if(window.innerWidth > 639) {
+addEventListener("resize", (event) => { console.log("event:", event)
+        if(window.innerWidth > 992) {
             const propertiesHeight = document.getElementById('properties')
             const topComponentHeight = document.getElementById('top-component-details')
-            var overflow = document.getElementById('detail-overflow'); 
-            if(propertiesHeight && topComponentHeight && overflow ){
+            var overflow1 = document.getElementById('detail-overflow'); 
+            if(propertiesHeight && topComponentHeight && overflow1 ){
                 const padding = 32
                 const diff = propertiesHeight.offsetHeight - topComponentHeight.offsetHeight - (2*padding)
-                overflow.style.height = diff +'px';
+                overflow1.style.height = diff +'px';
+            }
+        } else {
+            var overflow2= document.getElementById('detail-overflow'); 
+            if(overflow2 ){
+                overflow2.style.height = '100%'
             }
         }
+});
+
+onMounted(() => {
+      // Access the event object during post-mount changes
+
     // Set the height of the div (replace 300px with your desired height)
     });
 </script>
@@ -37,7 +46,7 @@ onMounted(() => {
                 <GoogleMap />
                 <PurchaseGuarantee class="mt-4" />
             </div>
-            <div class="itinerary-title mt-4 sm:text-center sm:text-center sm:text-xl sm:mt-4 sm:pt-4"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
+            <div class="itinerary-title mt-4 text-lg sm:text-center sm:text-2xl sm:mt-4 sm:pt-4"><i class="i-icon pi pi-sitemap pr-1"></i>Itinerary</div>
         </div>
         <ItineraryTimeline />
     </div>
@@ -75,6 +84,7 @@ onMounted(() => {
 
     .description {
         font-size: 0.8rem;
+        font-weight:500;
     }
 
     .itinerary-title {
@@ -83,7 +93,7 @@ onMounted(() => {
         font-weight: 800;
     }
 
-    @media screen and (max-width: 639px) {
+    @media screen and (max-width: 991px) {
         .details {
             border: none;
             padding: 0.5em;
@@ -105,7 +115,7 @@ onMounted(() => {
 
         .description {
             font-size: 1rem;
-        font-weight: 500;
+            font-weight: 500;
         }
 
 

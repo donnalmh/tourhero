@@ -21,17 +21,17 @@ const props = defineProps<timelineProps>()
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
                         <div class="flex flex-row sm:flex-col ">
-                            <div class="day text-sm sm:text-base">Day {{ props.dayNo}}</div>
-                            <div class="title ml-3 text-sm sm:text-base sm:ml-0  sm:mt-4">{{  props.title  }}</div>
+                            <div class="day text-sm sm:text-xl">Day {{ props.dayNo}}</div>
+                            <div class="title ml-3 text-sm sm:text-xl sm:ml-0  sm:mt-4">{{  props.title  }}</div>
                         </div>
                         <div class="carousel-sm  sm:mt-4">
                             <TimelineItemCarousel :links="props.link"/>
                         </div>
-                        <div class='description sm:mt-4'>
+                        <div class='description mt-2 sm:mt-4'>
                             {{ props.description  }}
                         </div>
                     </div>
-                    <div class="link  sm:mt-4">
+                    <div class="link  sm:mt-4 ">
                         Show more
                     </div>
                 </div>
@@ -42,7 +42,13 @@ const props = defineProps<timelineProps>()
 <style scoped>
 .carousel-lg {
     width: 200px;
-    height: 120px;
+    /* height: 120px; */
+}
+
+.link {
+    text-decoration: underline;
+    color: #478f88;
+    font-size:0.7rem;   
 }
 
 .carousel-sm {
@@ -52,7 +58,7 @@ const props = defineProps<timelineProps>()
 .timeline-content {
         display: flex;
         flex-direction: row;
-        height: 120px;
+        /* height: 120px; */
     }
 .timeline-item {
     position: relative;
@@ -64,7 +70,7 @@ const props = defineProps<timelineProps>()
     color:#798590;
     font-weight:500;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 991px) {
     .carousel-lg {
         display: none;
     }
@@ -81,9 +87,9 @@ const props = defineProps<timelineProps>()
     }
 
     .description {
-        font-size: 0.8rem;
         color:#798590;
-        font-weight:500;
+        font-weight:550;
+        font-size:1rem;
     }
 
     .timeline-item {
@@ -103,13 +109,15 @@ const props = defineProps<timelineProps>()
         .timeline-item::after {
             top: 2%
          }
+
+    .link {
+        text-decoration: underline;
+        color: #478f88;
+        font-size:0.9rem;   
+    }
 }
 
-.link {
-    text-decoration: underline;
-    color: #478f88;
-    font-size:0.7rem;   
-}
+
 
 .title {
     font-weight: 600;

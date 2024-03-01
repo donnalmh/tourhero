@@ -55,6 +55,13 @@ a,
   font-weight: 500;
 }
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url(./font/gilroy/Gilroy-Medium.ttf);
+  font-style: normal;
+  font-weight: 550;
+}
+
 
 @font-face {
   font-family: 'Gilroy';

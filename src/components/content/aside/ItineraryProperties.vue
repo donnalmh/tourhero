@@ -25,7 +25,7 @@ import GoogleMap from './GoogleMap.vue';
 .mobile {
     display: block;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 991px) {
     .mobile {
         display: none;
     }

@@ -96,7 +96,7 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
   display: none;
 }
 
-@media screen and (max-width: 639px)
+@media screen and (max-width: 991px)
      {
       .carousel__item {
         min-height: 600px;
@@ -111,7 +111,7 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
       }
 
       .carousel__slide img{
-        width: 639px;
+        width: 991px;
         aspect-ratio: 1/1;
       }
 
