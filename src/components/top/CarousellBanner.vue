@@ -20,7 +20,7 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
   // const width = window.innerWidth  < 639 ? 400 : 1600
   const height = 600
   const width = 1600
-  const itemsToShow =  window.innerWidth  < 639  ? 1.1 : 1.5
+  const itemsToShow =  window.innerWidth  < 991  ? 1.1 : 1.5
   const link = "https://picsum.photos/"+width+ "/" +height+"?q="
   const images: SourceImage[] = [
     { id: 1, url: link + 1 },
@@ -35,7 +35,7 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
 <template>
     <Carousel :items-to-show="itemsToShow" :wrap-around="true">
       <Slide v-for="link in images" :key="link.id">
-        <img :src="link.url" />
+        <img class="carousel-image" :src="link.url" />
       </Slide>
   
       <template #addons>
@@ -121,6 +121,13 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
 
       .carousel__pagination {
         justify-content: left;
+      }
+
+      .carousel-image {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        object-position: 25% 25%;
       }
     }
 </style>
