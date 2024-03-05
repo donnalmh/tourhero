@@ -9,12 +9,13 @@
 </script>
 <template>
 <div class="large-device:border large-device:border-slate-200 large-device:p-4 rounded sm:mt-4 sm:pt-4">
-    <div class="text-cerulean-blue  sm:text-center sm:text-2xl sm:mt-2">
+    <div class="text-cerulean-blue text-lg  sm:text-center sm:text-2xl sm:mt-2">
         <i class=" pi pi-wallet mr-3"></i>
-    <span class='navy confidence'>Buy With Confidence</span></div>
+        <span class='navy confidence sm:text-2xl'>Buy With Confidence</span></div>
     <div class="points mt-3">
     <div v-for="(point, index) in guaranteePoints" :key="index">
         <div class="text-base sm:text-lg">
+            <!-- <i class="text-cerulean-blue pi pi-check-circle mr-3"></i> -->
             <i class=" text-cerulean-blue fa-solid fa-circle-check mr-3"></i>
         <span class='detail'>{{ point }}</span></div>
     </div>
@@ -41,7 +42,6 @@
 }
 .confidence {
     font-weight:900;
-    font-size: 18px;
 }
 .navy {
     color: #132c63
