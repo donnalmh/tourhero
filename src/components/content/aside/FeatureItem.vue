@@ -23,7 +23,7 @@ import { computed, defineProps } from 'vue';
     <div class="px-4 sm:px-0 pt-4">
         <div class="icon sm:text-lg"><i :class="iconString"></i></div>
         <div class="feature text-slate-400">{{category}}</div>
-        <div class="value text-black">{{value }} <span v-if="category=='DURATION'" class="font-extrabold">days</span></div>
+        <div class="value text-black">{{value }} <span v-if="category=='DURATION'" class="font-extrabold sm:font-medium">days</span></div>
     </div>
 </template>
 

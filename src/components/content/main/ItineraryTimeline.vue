@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import type { ItineraryProps } from '@/components/Interfaces';
 import TimelineItem from './TimelineItem.vue'
 import { inject } from 'vue';
-
-import type { ItineraryProps } from '../ItineraryContent.vue';
-    const itineraryObject: ItineraryProps | undefined = inject('itineraryObject')
-    const itineraryDays = itineraryObject?.itineraryDetail;
+const itineraryObject: ItineraryProps | undefined = inject('itineraryObject')
+const itineraryDays = itineraryObject?.itineraryDetail;
 </script>
 
 <template>
@@ -18,9 +17,6 @@ import type { ItineraryProps } from '../ItineraryContent.vue';
 <style scoped>
     .overflow {
         overflow-y: scroll;
-        /* height:550px;
-        padding-top:5px; */
-
     }
     .timeline {
         position: relative;

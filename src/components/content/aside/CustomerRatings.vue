@@ -1,25 +1,24 @@
 
 <script setup lang="ts">
+    import type { ItineraryProps } from '@/components/Interfaces';
+import { inject } from 'vue';
+
     export interface Props {
         rating: number
         numReviews: number
     }
-    
-    const props =  withDefaults(defineProps<Props>(), {
-        rating: 4.8,
-        numReviews: 23
-    }) 
+    const itineraryObject: ItineraryProps | undefined = inject('itineraryObject')
 </script>
 
 <template>
     <div class="flex flex-row rating">
         <div v-for="n in 5" :key="n" class="mr-2">
-            <div :style="{color : (n <= Math.floor(props.rating) ? '#F7000A' : 'lightslategray')}">
+            <div :style="{color : (n <= Math.floor(itineraryObject?.rating || 0) ? '#F7000A' : 'lightslategray')}">
                 <i class="pi pi-star-fill"></i>
             </div>
         </div>
         <div class="num-review"> 
-            <span class="text-white">{{props.rating}}</span>&nbsp;({{props.numReviews}})
+            <span class="text-white">{{itineraryObject?.rating || 0}}</span>&nbsp;({{itineraryObject?.numReviews }})
         </div>
     </div>
 </template>

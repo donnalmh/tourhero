@@ -2,7 +2,7 @@
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { inject } from 'vue';
 import { ref } from 'vue'
-import type { SourceImage } from '../ItineraryContent.vue';
+import type { SourceImage } from '@/components/Interfaces';
 
 export interface linkProps {
     links: SourceImage[]
@@ -12,7 +12,6 @@ const props = defineProps<linkProps>()
 <template>
     <Carousel :itemsToScroll="1">
         <Slide v-for="link in props.links" :key="link.id"> 
-        <!-- <img src="https://picsum.photos/200/120?q=1" /> -->
           <img class="rounded" :src="link.url" /> 
         </Slide>
   
@@ -49,17 +48,5 @@ const props = defineProps<linkProps>()
       width:100%
     }
   }
-
-  .carousel__viewport {
-    /* width: 250px!important; */
-  }
-  ol.carousel__track {
-    /* width: 250px!important; */
-  }
-  .carousel__slide {
-    /* width: 250px!important; */
-    /* height: 150px; */
-  }
-
 
   </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SourceImage } from '../ItineraryContent.vue';
+import type { SourceImage } from '@/components/Interfaces';
 import TimelineItemCarousel from './TimelineItemCarousel.vue';
 export interface timelineProps {
     dayNo: number

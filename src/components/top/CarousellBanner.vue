@@ -15,7 +15,7 @@ test test
 <script setup lang="ts">
   // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import type { SourceImage } from '../content/ItineraryContent.vue';
+import type { SourceImage } from '../Interfaces';
   // const height = window.innerWidth  < 639 ? 400 : 600
   // const width = window.innerWidth  < 639 ? 400 : 1600
   const height = 600

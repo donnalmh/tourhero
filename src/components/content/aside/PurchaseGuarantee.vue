@@ -15,7 +15,6 @@
     <div class="points mt-3">
     <div v-for="(point, index) in guaranteePoints" :key="index">
         <div class="text-base sm:text-lg">
-            <!-- <i class="text-cerulean-blue pi pi-check-circle mr-3"></i> -->
             <i class=" text-cerulean-blue fa-solid fa-circle-check mr-3"></i>
         <span class='detail'>{{ point }}</span></div>
     </div>
