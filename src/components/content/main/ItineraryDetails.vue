@@ -48,8 +48,8 @@ onMounted(() => {
     <div class="details bg-white">
         <div id="top-component-details">
             <div class="flex justify-between caption">
-                <div>Asia > Singapore > Strenuous Travel Style</div>
-                <div>ID: 09781021</div>
+                <div class="font-medium">Asia > Singapore > Strenuous Travel Style</div>
+                <div class="font-medium">ID: 09781021</div>
             </div>
             <div class="title mt-4">Marina Bay Sands Observation</div>
             <div class="description">A great spot for R&R: order yourself a drink from the bar and get comfortable on one of the day beds
@@ -78,7 +78,7 @@ onMounted(() => {
 
     .caption{
         color: #A19A9A;
-        font-size: 0.6rem;
+        font-size: 1rem;
         display: flex;
     }
 
@@ -91,11 +91,9 @@ onMounted(() => {
         font-size: 1.5rem;
     }
 
-
-
     .description {
-        font-size: 0.8rem;
-        font-weight:500;
+        font-size: 1.1rem;
+        font-weight:600;
     }
 
     .itinerary-title {

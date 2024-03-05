@@ -48,7 +48,7 @@ import CustomerRatings from './CustomerRatings.vue'
         top: 3px;
     } */
     .all-buttons {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
     .book-trip {
         color: white;
@@ -62,7 +62,7 @@ import CustomerRatings from './CustomerRatings.vue'
     }
 
     .from-title {
-        font-size: 0.6rem;
+        font-size: 1rem;
     }
 
     .price-value {
@@ -72,7 +72,7 @@ import CustomerRatings from './CustomerRatings.vue'
     }
 
     .prev-price{
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: normal;
         text-decoration: line-through;
         font-weight:100;
@@ -84,6 +84,6 @@ import CustomerRatings from './CustomerRatings.vue'
 
     .per-person {
         margin-top: -0.2em;
-        font-size: 0.6rem;
+        font-size: 1rem;
     }
 </style>

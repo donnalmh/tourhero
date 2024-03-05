@@ -26,7 +26,7 @@
 
 <style scoped>
 .rating {
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 .filled-star {
     color: #F7000A;

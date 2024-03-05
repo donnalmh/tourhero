@@ -23,7 +23,7 @@ import { computed, defineProps } from 'vue';
     <div class="px-4 sm:px-0 pt-4">
         <div class="icon sm:text-lg"><i :class="iconString"></i></div>
         <div class="feature text-slate-400">{{category}}</div>
-        <div class="value text-black">{{value }} <span v-if="category=='DURATION'">days</span></div>
+        <div class="value text-black">{{value }} <span v-if="category=='DURATION'" class="font-extrabold">days</span></div>
     </div>
 </template>
 
@@ -34,12 +34,12 @@ import { computed, defineProps } from 'vue';
     }
 
     .feature {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         font-weight:800;
     }
 
     .value {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight:800;
     }
 

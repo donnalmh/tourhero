@@ -12,7 +12,7 @@
     <div class="text-cerulean-blue  sm:text-center sm:text-2xl sm:mt-2"><i class=" pi pi-wallet mr-3"></i><span class='navy confidence'>Buy With Confidence</span></div>
     <div class="points mt-3">
     <div v-for="(point, index) in guaranteePoints" :key="index">
-        <div class="sm:text-lg"><i class="pi pi-check-circle mr-3"></i><span class='detail'>{{ point }}</span></div>
+        <div class="text-base sm:text-lg"><i class="text-cerulean-blue pi pi-check-circle mr-3"></i><span class='detail'>{{ point }}</span></div>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
 .detail {
     color: black;
     font-weight: 600;
-    font-size:0.7rem;
+    font-size:1rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -37,6 +37,7 @@
 }
 .confidence {
     font-weight:900;
+    font-size: 18px;
 }
 .navy {
     color: #132c63

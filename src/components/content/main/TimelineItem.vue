@@ -21,8 +21,8 @@ const props = defineProps<timelineProps>()
                 <div class="ml-4 flex flex-col grow justify-between">
                     <div>
                         <div class="flex flex-row sm:flex-col ">
-                            <div class="day text-sm sm:text-xl">Day {{ props.dayNo}}</div>
-                            <div class="title ml-3 text-sm sm:text-xl sm:ml-0  sm:mt-4">{{  props.title  }}</div>
+                            <div class="day sm:text-xl">Day {{ props.dayNo}}</div>
+                            <div class="title ml-3 sm:text-xl sm:ml-0  sm:mt-4">{{  props.title  }}</div>
                         </div>
                         <div class="carousel-sm  sm:mt-4">
                             <TimelineItemCarousel :links="props.link"/>
@@ -48,7 +48,7 @@ const props = defineProps<timelineProps>()
 .link {
     text-decoration: underline;
     color: #478f88;
-    font-size:0.7rem;   
+    font-size: 1rem;   
 }
 
 .carousel-sm {
@@ -66,7 +66,7 @@ const props = defineProps<timelineProps>()
 }
 
 .description {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color:#798590;
     font-weight:500;
 }
@@ -120,10 +120,12 @@ const props = defineProps<timelineProps>()
 
 
 .title {
+    font-size:17px;
     font-weight: 600;
 }
 .day{
-    color: #123162;
+        font-size:17px;
+        color: #123162;
         font-weight: 600;
 }
 
