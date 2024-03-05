@@ -24,7 +24,8 @@ import CustomerRatings from './CustomerRatings.vue'
             </div>
             <div class="col-span-2">
                 <button class="bg-transparent hover:bg-slate-500 hover:text-white text-slate-500  font-bold py-2 px-4 border border-slate-500 rounded w-full">
-                    <i class="pi pi-heart-fill icon-heart"></i>
+                    
+                    <div><i class="pi pi-heart-fill icon-heart"></i></div>
                     
                     <!-- <div class="flex flex-col justify-center">
                     </div> -->

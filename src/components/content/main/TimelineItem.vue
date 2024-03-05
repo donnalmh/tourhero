@@ -50,6 +50,7 @@ const props = defineProps<timelineProps>()
     color: #478f88;
     font-size: 1rem;   
     font-weight: 500;
+    cursor: pointer;
 }
 
 .carousel-sm {
