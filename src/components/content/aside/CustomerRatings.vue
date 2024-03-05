@@ -39,6 +39,7 @@
 
 .num-review {
     color: #b2b2b2;
- font-weight:100;
+    font-weight:100;
+    cursor: pointer;
 }
 </style>

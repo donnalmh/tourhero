@@ -60,7 +60,13 @@ onMounted(() => {
                 <GoogleMap />
                 <PurchaseGuarantee class="mt-4" />
             </div>
-            <div class="mt-4 text-lg text-cerulean-blue sm:text-center sm:text-2xl sm:mt-4 sm:pt-4"><i class="i-icon pi pi-sitemap pr-1"></i><span class='itinerary-title '>Itinerary</span></div>
+            <div class="mt-4 text-lg text-cerulean-blue sm:text-center sm:text-2xl sm:mt-4 sm:pt-4">
+                <!-- <i class="i-icon pi pi-sitemap pr-1"></i> -->
+                <i class="fa-solid fa-map  pr-1"></i>
+                <!-- <i class="fa-regular fa-map-location-dot"></i> -->
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <span class='itinerary-title '>Itinerary</span>
+            </div>
         </div>
         <ItineraryTimeline />
     </div>

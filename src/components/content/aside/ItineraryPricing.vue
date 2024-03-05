@@ -8,7 +8,7 @@ import CustomerRatings from './CustomerRatings.vue'
         <div class="flex justify-center price-value">1,300 USD</div>
         <div class="flex justify-center per-person">
             <div class="grid grid-cols-2 gap-1">
-                <div class="col-span-1"><div class="flex justify-center prev-price">
+                <div class="col-span-1 flex flex-col justify-center"><div class="flex justify-end prev-price">
                     <div class="flex flex-col justify-center">1,699 USD</div> </div></div>
                 <div class="col-span-1"><div>PER PERSON</div></div>
             </div>
@@ -61,9 +61,7 @@ import CustomerRatings from './CustomerRatings.vue'
  
     }
 
-    .from-title {
-        font-size: 1rem;
-    }
+ 
 
     .price-value {
         font-size: 1.5rem;
@@ -72,18 +70,17 @@ import CustomerRatings from './CustomerRatings.vue'
     }
 
     .prev-price{
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: normal;
         text-decoration: line-through;
         font-weight:100;
     }
     .per-person, .from-title {
         color: #b2b2b2;
-        font-weight:100;
+        font-size: 1.1rem;
     }
 
     .per-person {
         margin-top: -0.2em;
-        font-size: 1rem;
     }
 </style>

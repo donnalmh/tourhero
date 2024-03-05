@@ -20,7 +20,7 @@ import type { SourceImage } from '../content/ItineraryContent.vue';
   // const width = window.innerWidth  < 639 ? 400 : 1600
   const height = 600
   const width = 1600
-  const itemsToShow =  window.innerWidth  < 991  ? 1.1 : 1.5
+  const itemsToShow =  window.innerWidth  < 991  ? 1 : 1.5
   const link = "https://picsum.photos/"+width+ "/" +height+"?q="
   const images: SourceImage[] = [
     { id: 1, url: link + 1 },
